@@ -20,4 +20,8 @@ class UserController extends Controller
     function viewPage(){
         return view('user');
     }
+
+    function adminLogin($username){
+        return view('admin',["username"=>$username]);
+    }
 }
