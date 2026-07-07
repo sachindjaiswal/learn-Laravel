@@ -26,3 +26,5 @@ Route::get("/admin/login/{username}",[UserController::class,'adminLogin']);
 
 Route::get("/student",[Student::class,'getStudentDetails']);
 
+Route::view("/user-form",'user-form');
+Route::post("/addUser",[UserController::class , 'addUser']);

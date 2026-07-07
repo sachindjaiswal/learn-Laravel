@@ -24,4 +24,8 @@ class UserController extends Controller
     function adminLogin($username){
         return view('admin',["username"=>$username]);
     }
+
+    function addUser(){
+        return "The mthod has been called to addd a user";
+    }
 }
