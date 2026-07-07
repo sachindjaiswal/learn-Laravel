@@ -25,7 +25,18 @@ class UserController extends Controller
         return view('admin',["username"=>$username]);
     }
 
-    function addUser(){
-        return "The mthod has been called to addd a user";
+    function addUser(Request $req){
+        $userDetail = [
+            "username"=>$req->username,
+            "email"=>$req->email,
+            "city"=>$req->city
+        ];
+        echo $userDetail["username"] ;
+        echo "<br>";        
+        echo $userDetail["email"] ;
+        echo "<br>";
+                echo $userDetail["city"] ;
+
+
     }
 }
