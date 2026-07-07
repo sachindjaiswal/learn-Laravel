@@ -20,7 +20,7 @@ Route::get("/about/{name}" , function(){
 Route::get("/user" , [UserController::class, 'getUser']);
 Route::get("/about",[UserController::class,'aboutUser']);
 Route::get("/user/{name}",[UserController::class,'getUserName']);
-Route::get('/view',[UserController::class,'viewPage']);
+Route::get('/view/{name}',[UserController::class,'viewPage']);
 Route::view('/admin','admin');
 Route::get("/admin/login/{username}",[UserController::class,'adminLogin']);
 

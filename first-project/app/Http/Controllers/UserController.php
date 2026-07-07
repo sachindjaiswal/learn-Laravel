@@ -17,8 +17,8 @@ class UserController extends Controller
     function getUserName($name){
         return "The name of the user is {$name} ";
     }
-    function viewPage(){
-        return view('user');
+    function viewPage($name){
+        return view('user', ["name"=>$name]);
     }
 
     function adminLogin($username){
