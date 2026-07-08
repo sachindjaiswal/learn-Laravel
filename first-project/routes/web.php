@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\skillController;
 use App\Http\Controllers\Student;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,7 @@ Route::get("/admin/login/{username}",[UserController::class,'adminLogin']);
 Route::get("/student",[Student::class,'getStudentDetails']);
 
 Route::view("/user-form",'user-form');
-Route::post("/addUser",[UserController::class , 'addUser']);
+Route::post("/addUsers",[UserController::class , 'addUser']);
+
+Route::view('/frontendSkill','skill-form');
+Route::post('/backendSkill',[skillController::class , 'getSkill']);

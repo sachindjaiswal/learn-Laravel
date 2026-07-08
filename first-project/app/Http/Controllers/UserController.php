@@ -34,7 +34,7 @@ class UserController extends Controller
         echo $userDetail["username"] ;
         echo "<br>";        
         echo $userDetail["email"] ;
-        echo "<br>";
+        echo "<br>"; 
                 echo $userDetail["city"] ;
 
 
