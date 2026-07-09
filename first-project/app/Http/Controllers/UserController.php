@@ -26,6 +26,10 @@ class UserController extends Controller
     }
 
     function addUser(Request $req){
+
+        $req -> validate([
+            'username'=>'required | min:3 | max:20','email'=>'required | email' , 'city'=>'required'
+        ]);
         $userDetail = [
             "username"=>$req->username,
             "email"=>$req->email,

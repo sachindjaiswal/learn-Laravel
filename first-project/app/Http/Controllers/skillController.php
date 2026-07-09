@@ -8,6 +8,7 @@ class skillController extends Controller
 {
     //
     function getSkill(Request $req){
+
         $skill = print_r($req->skill);
         $gender = $req->gender;
 
