@@ -11,7 +11,7 @@
      <form action="addUsers" method="POST">
         @csrf
          <div class="input-wrapper">
-            <input type="text" placeholder="Enter a username" name="username" ><br>
+            <input type="text" placeholder="Enter a username" name="username" value="{{old('username')}}" ><br>
             <span>@error('username'){{$message}}@enderror
 
             </span><br>

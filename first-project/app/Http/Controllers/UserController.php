@@ -28,8 +28,9 @@ class UserController extends Controller
     function addUser(Request $req){
 
         $req -> validate([
-            'username'=>'required | min:3 | max:20','email'=>'required | email' , 'city'=>'required'
-        ]);
+            'username'=>'required | min:3 | max:20','email'=>'required | email' , 'city'=>'required | uppercase'
+        ],['username.required'=>'Username can not be empty',
+            'username.min'=>'usrname must be greater than 3 characters ']);
         $userDetail = [
             "username"=>$req->username,
             "email"=>$req->email,
