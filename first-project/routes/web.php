@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\hotel;
 use App\Http\Controllers\skillController;
 use App\Http\Controllers\Student;
 use App\Http\Controllers\UserController;
@@ -30,5 +31,14 @@ Route::get("/student",[Student::class,'getStudentDetails']);
 Route::view("/user-form",'user-form');
 Route::post("/addUsers",[UserController::class , 'addUser']);
 
-Route::view('/frontendSkill','skill-form');
+Route::view('/frontendSkill','skill-form')->middleware('checkOne');
 Route::post('/backendSkill',[skillController::class , 'getSkill']);
+
+
+// Hotels PAths 
+
+Route::prefix('hotel')->group(function(){
+    Route::view('/home','hotelView');
+    Route::get('/admin',[hotel::class , "add"]);
+    Route::get('/show',[hotel::class , "show"]); 
+});
