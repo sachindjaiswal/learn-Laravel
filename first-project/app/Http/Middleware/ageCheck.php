@@ -14,11 +14,13 @@ class ageCheck
      * @param  Closure(Request): (Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
+
     {
-        echo "From age check";
-        if($request->age<18){
-            die("You cant visit the the site");
+        $age = $request -> age ;
+        if($age<18){
+            die("Only adults can access this page ");
         }
+        echo "This is from the ageCheck Middleware <br>";
         return $next($request);
     }
 }
