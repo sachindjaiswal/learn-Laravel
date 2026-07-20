@@ -60,3 +60,5 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/hotel/contact', 'hotelContact')->middleware(ageCheck::class , countryCheck::class);
 
     Route::get('/user',[UserController::class , 'getUser']);
+
+    Route::get("/student",[Student::class , 'getStudentDetails']);
