@@ -9,6 +9,7 @@ class Student extends Controller
     //
     function getStudentDetails(){
 
-        return view('student',compact('Student'));
+        $students = \App\Models\student::all();
+        return view('student' , ['Students'=>$students]);
     }
 }
