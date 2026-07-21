@@ -30,11 +30,11 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get("/student",[Student::class,'getStudentDetails']);
 
-// Route::view("/user-form",'user-form');
+Route::view("/user-form",'user-form');
 // Route::post("/addUsers",[UserController::class , 'addUser']);
 
-// Route::view('/frontendSkill','skill-form');
-// Route::post('/backendSkill',[skillController::class , 'getSkill']);
+Route::view('/frontendSkill','skill-form');
+Route::post('/backendSkill',[skillController::class , 'getSkill']);
 
 
 // // Hotels PAths 
@@ -62,3 +62,5 @@ use Illuminate\Support\Facades\Route;
     Route::get('/user',[UserController::class , 'getUser']);
 
     Route::get("/student",[Student::class , 'getStudentDetails']);
+
+    Route::get("/users" , [UserController::class , 'queries']);

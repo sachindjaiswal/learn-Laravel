@@ -11,6 +11,26 @@ class UserController extends Controller
 
         return view('user' , ["record"=> $record]);
     }
+
+    function queries(){
+
+    // Gets all data from the table 
+        $result = DB::table('users')->get();
+
+        // Gets data from the table where the name is Sachin
+        // $result = DB::table("users")->where('name',"Sachin")->get();
+
+        // Insert data in the table 
+        // $result = DB::table('users')->insert([
+        //     'name'=>"test",
+        //     'email' => "test@gmail.com",
+        //     'password' => bcrypt("test123"),
+
+        // ]);
+
+        $result = DB::table('users')->where('name',"test")->update(["name"=>"Ambuj"]);
+        return $result;
+    }
     // //
     // function getUser(){
     //     return "Sachin" ;
