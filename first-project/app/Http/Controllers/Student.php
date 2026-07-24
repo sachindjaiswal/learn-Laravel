@@ -17,7 +17,15 @@ class Student extends Controller
     function getStudentDetails(){
         //  $response = ModelsStudent::get();
         $response = ModelsStudent::where('first_name','John')->update(['last_name'=>"jaiswal"]);
-        $response = [$response];
-        return $response ;
+        // $response = [$response];
+
+        // ModelsStudent::insert([
+        //     "student_id"=>3,
+        //     "first_name"=>"Sachin",
+        //     "last_name"=>"Jaiswal",
+        //     "age"=>20,
+        //     "email"=>"sachin@gmail.com"
+        // ]);
+        return ;
     }
 }
