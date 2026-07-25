@@ -18,6 +18,8 @@ class UserController extends Controller
         $result = DB::table('users')->get();
 
         // Gets data from the table where the name is Sachin
+
+        
         // $result = DB::table("users")->where('name',"Sachin")->get();
 
         // Insert data in the table 
