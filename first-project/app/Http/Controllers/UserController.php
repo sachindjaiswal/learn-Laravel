@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use ResourceBundle;
+
 class UserController extends Controller
 {
     function getUser(Request $req){
@@ -47,6 +49,24 @@ class UserController extends Controller
 
     function group2(){
         return "This is group 2 ";
+    }
+
+    function login(Request $req){
+        $req->session()->put('user',$req->input('username'));
+        echo session('user');
+        echo "<br>";
+        return redirect('/hotel') ;
+    }
+
+    function Logout(){
+        session()->pull('user');
+
+        if(session('user')){
+            echo session('user');
+            return "The session was not deleted ";
+            }elseif(!session('user')){
+                return "This is the logout page";
+            }
     }
     // //
     // function getUser(){

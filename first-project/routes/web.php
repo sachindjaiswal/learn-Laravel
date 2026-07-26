@@ -71,3 +71,10 @@ Route::post('/backendSkill',[skillController::class , 'getSkill']);
 
     Route::match(["post","get"],"/user" , [UserController::class , 'group1']);
     Route::match(["put","patch"],"/user" , [UserController::class , 'group2']);
+
+    Route::view("/login","Login");
+    Route::post("/login",[UserController::class , 'login']);
+
+    Route::view('/hotel',"hotelAbout");
+
+    Route::get('/logout',[UserController::class , 'Logout']);
