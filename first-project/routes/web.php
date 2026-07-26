@@ -59,8 +59,15 @@ Route::post('/backendSkill',[skillController::class , 'getSkill']);
 
 // Route::view('/hotel/contact', 'hotelContact')->middleware(ageCheck::class , countryCheck::class);
 
-    Route::get('/user',[UserController::class , 'getUser']);
+    // Route::post('/user',[UserController::class , 'getUser']);
 
-    Route::get("/student",[Student::class , 'getStudentDetails']);
+    // Route::put("/user" , [UserController::class , 'putUser']);
 
-    Route::get("/users" , [UserController::class , 'queries']);
+    // Route::get("/student",[Student::class , 'getStudentDetails']);
+
+    // Route::get("/users" , [UserController::class , 'queries']);
+
+    // Route::any("/user", [UserController::class , "any"]);
+
+    Route::match(["post","get"],"/user" , [UserController::class , 'group1']);
+    Route::match(["put","patch"],"/user" , [UserController::class , 'group2']);

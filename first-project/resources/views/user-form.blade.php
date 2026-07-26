@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
 
    @if($errors -> any())
    @foreach($errors->all() as $error)
@@ -24,4 +24,18 @@
 </div>
  
 
+ -->
 
+
+<div>
+   <form action="/user" method="post">
+      @csrf
+      <input type="hidden" name="_method" value="PATCH">
+      <input type="text" name="user" placeholder="Enter your name">
+      <br>
+      <br>
+      <input type="password" name="password" placeholder="Enter your password">
+      <br>
+      <input type="submit" name="Submit" value="Submit">
+   </form>
+</div>

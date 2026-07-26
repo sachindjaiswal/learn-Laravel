@@ -6,12 +6,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
-    function getUser(){
-        $record = DB::select('select * from users');
+    function getUser(Request $req){
+        // $record = DB::select('select * from users');
 
-        return view('user' , ["record"=> $record]);
+        return $req ;
     }
 
+    function putUser(){
+        return "This is the PUT method ";
+    }
+
+    function any(){
+        return "This is the any method";
+    }
     function queries(){
 
     // Gets all data from the table 
@@ -32,6 +39,14 @@ class UserController extends Controller
 
         $result = DB::table('users')->where('name',"test")->update(["name"=>"Ambuj"]);
         return $result;
+    }
+
+    function group1(){
+        return "This is group 1 ";
+    }
+
+    function group2(){
+        return "This is group 2 ";
     }
     // //
     // function getUser(){
