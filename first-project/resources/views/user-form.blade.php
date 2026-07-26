@@ -28,9 +28,11 @@
 
 
 <div>
+
+   <h1>{{session('message')}}</h1>
    <form action="/user" method="post">
       @csrf
-      <input type="hidden" name="_method" value="PATCH">
+      <!-- <input type="hidden" name="_method" value="PATCH"> -->
       <input type="text" name="user" placeholder="Enter your name">
       <br>
       <br>

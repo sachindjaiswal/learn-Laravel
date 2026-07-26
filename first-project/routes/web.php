@@ -69,8 +69,8 @@ Route::post('/backendSkill',[skillController::class , 'getSkill']);
 
     // Route::any("/user", [UserController::class , "any"]);
 
-    Route::match(["post","get"],"/user" , [UserController::class , 'group1']);
-    Route::match(["put","patch"],"/user" , [UserController::class , 'group2']);
+    // Route::match(["post","get"],"/user" , [UserController::class , 'group1']);
+    // Route::match(["put","patch"],"/user" , [UserController::class , 'group2']);
 
     Route::view("/login","Login");
     Route::post("/login",[UserController::class , 'login']);
@@ -78,3 +78,5 @@ Route::post('/backendSkill',[skillController::class , 'getSkill']);
     Route::view('/hotel',"hotelAbout");
 
     Route::get('/logout',[UserController::class , 'Logout']);
+
+    Route::post('/user',[UserController::class , 'addUser']);

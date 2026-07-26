@@ -68,6 +68,11 @@ class UserController extends Controller
                 return "This is the logout page";
             }
     }
+
+    function addUser(Request $req){
+        $req ->session()->flash("message","User has been added successfully");
+        return redirect('/user-form');
+    }
     // //
     // function getUser(){
     //     return "Sachin" ;
