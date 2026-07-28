@@ -12,6 +12,6 @@ class skillController extends Controller
         $skill = print_r($req->skill);
         $gender = $req->gender;
 
-        echo "The user has {$skill} as skill and there gender is {$gender}";
+        echo "The user has {$skill} as skill and there gender is {$gender} . ";
     }
 }
