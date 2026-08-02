@@ -3,6 +3,7 @@
 use App\Http\Controllers\hotel;
 use App\Http\Controllers\skillController;
 use App\Http\Controllers\Student;
+use App\Http\Controllers\Upload;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\ageCheck;
 use App\Http\Middleware\countryCheck;
@@ -80,3 +81,6 @@ Route::post('/backendSkill',[skillController::class , 'getSkill']);
     Route::get('/logout',[UserController::class , 'Logout']);
 
     Route::post('/user',[UserController::class , 'addUser']);
+
+    Route::view('/upload','upload');
+    Route::post('/uploadPhoto',[Upload::class , 'uploadPhoto']);
